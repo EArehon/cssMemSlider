@@ -29,6 +29,31 @@ input[name="r"] {
     position: absolute;
 }
 
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control .title-wrapper {
+    width: 80%;
+    overflow: hidden;
+}
+
+.control .title-wrapper .titles {
+    display: flex;
+    width: 400%;
+}
+
+.control .title-wrapper .titles .title {
+    transition: .5s ease-in-out;
+}
+
+.title {
+    display: block;
+    width: 25%;
+}
+
 .nav {
     display: flex;
 }
@@ -48,6 +73,10 @@ input[name="r"] {
     border-radius: 50%;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .button:hover span {
     border-color: black;
     background-color: black;
@@ -55,28 +84,32 @@ input[name="r"] {
 
 
 
-#r1:checked ~ .slides .s1 {
+#r1:checked ~ .slides .s1,
+#r1:checked ~ .control .title-wrapper .titles .t1 {
     margin-left: 0;
 }
 
-#r2:checked ~ .slides .s1 {
+#r2:checked ~ .slides .s1,
+#r2:checked ~ .control .title-wrapper .titles .t1 {
     margin-left: -25%;
 }
 
-#r3:checked ~ .slides .s1  {
+#r3:checked ~ .slides .s1,
+#r3:checked ~ .control .title-wrapper .titles .t1  {
     margin-left: -50%;
 }
 
-#r4:checked ~ .slides .s1  {
+#r4:checked ~ .slides .s1,
+#r4:checked ~ .control .title-wrapper .titles .t1 {
     margin-left: -75%;
 }
 
 
 
-#r1:checked ~ .nav label[for=r1] span,
-#r2:checked ~ .nav label[for=r2] span,
-#r3:checked ~ .nav label[for=r3] span,
-#r4:checked ~ .nav label[for=r4] span {
+#r1:checked ~ .control .nav label[for=r1] span,
+#r2:checked ~ .control .nav label[for=r2] span,
+#r3:checked ~ .control .nav label[for=r3] span,
+#r4:checked ~ .control .nav label[for=r4] span {
   background: transparent;
   border: 0.2rem solid black;
 }
