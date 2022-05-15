@@ -29,18 +29,54 @@ input[name="r"] {
     position: absolute;
 }
 
-#r1:checked ~ .s1 {
+.nav {
+    display: flex;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.button span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid red;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.button:hover span {
+    border-color: black;
+    background-color: black;
+}
+
+
+
+#r1:checked ~ .slides .s1 {
     margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
+#r2:checked ~ .slides .s1 {
     margin-left: -25%;
 }
 
-#r3:checked ~ .s1  {
+#r3:checked ~ .slides .s1  {
     margin-left: -50%;
 }
 
-#r4:checked ~ .s1  {
+#r4:checked ~ .slides .s1  {
     margin-left: -75%;
+}
+
+
+
+#r1:checked ~ .nav label[for=r1] span,
+#r2:checked ~ .nav label[for=r2] span,
+#r3:checked ~ .nav label[for=r3] span,
+#r4:checked ~ .nav label[for=r4] span {
+  background: transparent;
+  border: 0.2rem solid black;
 }
