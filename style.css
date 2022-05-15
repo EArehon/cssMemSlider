@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    max-width: 1024px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slide {
+    width: 25%;
+    transition: .5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+}
+
+input[name="r"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1  {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1  {
+    margin-left: -75%;
+}
