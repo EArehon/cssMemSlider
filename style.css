@@ -4,8 +4,24 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.wrapper {
+    padding: 20px;
     max-width: 1024px;
+    margin: 0 auto;
+    min-width: 200px;
+}
+
+.container {
     overflow: hidden;
 }
 
@@ -25,14 +41,15 @@
 }
 
 input[name="r"] {
-    visibility: hidden;
-    position: absolute;
+    display: none;
 }
 
 .control {
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .control .title-wrapper {
@@ -68,20 +85,14 @@ input[name="r"] {
     display: block;
     width: 20px;
     height: 20px;
-    border: 3px solid red;
-    background-color: red;
+    border: 3px solid #79c0ff;
+    background-color: #79c0ff;
     border-radius: 50%;
 }
 
 .button:hover {
     cursor: pointer;
 }
-
-.button:hover span {
-    border-color: black;
-    background-color: black;
-}
-
 
 
 #r1:checked ~ .slides .s1,
@@ -111,5 +122,30 @@ input[name="r"] {
 #r3:checked ~ .control .nav label[for=r3] span,
 #r4:checked ~ .control .nav label[for=r4] span {
   background: transparent;
-  border: 0.2rem solid black;
+  border: 0.2rem solid #79c0ff;
+}
+
+#r1:checked ~ .control .nav label[for=r1]:hover span,
+#r2:checked ~ .control .nav label[for=r2]:hover span,
+#r3:checked ~ .control .nav label[for=r3]:hover span,
+#r4:checked ~ .control .nav label[for=r4]:hover span {
+  background: transparent;
+  border: 0.2rem solid white;
+}
+
+body .wrapper .container .control .nav .button:hover span {
+    border-color: white;
+    background-color: white;
+}
+
+
+
+@media (max-width:560px) {
+    .control{
+        flex-direction: column-reverse;
+    }
+
+    .control .title-wrapper {
+        width: 100%;
+    }
 }
