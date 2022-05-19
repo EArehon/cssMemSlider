@@ -133,9 +133,22 @@ input[name="r"] {
   border: 0.2rem solid white;
 }
 
+#r1:checked ~ .control .nav label[for=r1]:active span,
+#r2:checked ~ .control .nav label[for=r2]:active span,
+#r3:checked ~ .control .nav label[for=r3]:active span,
+#r4:checked ~ .control .nav label[for=r4]:active span {
+  background: transparent;
+  border: 0.2rem solid cyan;
+}
+
 body .wrapper .container .control .nav .button:hover span {
     border-color: white;
     background-color: white;
+}
+
+body .wrapper .container .control .nav .button:active span {
+    border-color: cyan;
+    background-color: cyan;
 }
 
 
